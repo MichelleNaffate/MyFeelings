@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/graph">
+
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:text="¿como te sientes el dia de hoy ?"
+                android:textAlignment="center" />
+            <LinearLayout
+                android:id="@+id/options"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btnverySad"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@color/transparente"
+                    android:src="@drawable/ic_baseline_sentiment_very_dissatisfied_24" />
+                <ImageButton
+                    android:id="@+id/btnsad"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@color/transparente"
+                    android:src="@drawable/ic_baseline_sentiment_dissatisfied_24" />
+                <ImageButton
+                    android:id="@+id/btnNeutral"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@color/transparente"
+                    android:src="@drawable/ic_baseline_sentiment_satisfied_24" />
+                <ImageButton
+                    android:id="@+id/btnmediofeliz"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@color/transparente"
+                    android:src="@drawable/ic_baseline_sentiment_satisfied_alt_24" />
+                <ImageButton
+                    android:id="@+id/btnmuyfeliz"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@color/transparente"
+                    android:src="@drawable/ic_baseline_sentiment_very_satisfied_24" />
+
+
+            </LinearLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/coloraccent"
+                android:textColor="@color/white"
+                android:text="guardar"
+                android:id="@+id/btnGuardar"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                />
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/bargraphs"
+                android:columnCount="2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Muy feliz"
+                    android:layout_marginRight="15dp"
+                    />
+                <View android:layout_height="20dp"
+                    android:layout_width="250dp"
+                    android:id="@+id/graphVeryHappy"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Feliz"
+                    android:layout_marginRight="15dp"
+                    />
+                <View android:layout_height="20dp"
+                    android:layout_width="250dp"
+                    android:id="@+id/graphfeliz"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Neutral"
+                    android:layout_marginRight="15dp"
+                    />
+                <View android:layout_height="20dp"
+                    android:layout_width="250dp"
+                    android:id="@+id/graphneutral"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Triste"
+                    android:layout_marginRight="15dp"
+                    />
+                <View android:layout_height="20dp"
+                    android:layout_width="250dp"
+                    android:id="@+id/graphtriste"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Muy Triste"
+                    android:layout_marginRight="15dp"
+                    />
+                <View android:layout_height="20dp"
+                    android:layout_width="250dp"
+                    android:id="@+id/graphVerytriste"/>
+
+
+
+
+            </GridLayout>
+
+        </LinearLayout>
+
+
+
+
+
+    </ScrollView>
+
+
+</LinearLayout>
